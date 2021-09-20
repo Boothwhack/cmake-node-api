@@ -26,7 +26,7 @@ if (WIN32)
     endif ()
 
     set(node_lib_file "${node_content_dir}/win-${node_windows_arch}/node.lib")
-    set(node_lib_url "https://nodejs.org/dist/${version}/win-${node_windows_library}/node.lib")
+    set(node_lib_url "https://nodejs.org/dist/${version}/win-${node_windows_arch}/node.lib")
 
     file(DOWNLOAD "${node_lib_url}" "${node_lib_file}")
 
