@@ -1,9 +1,5 @@
-execute_process(
-        COMMAND node "${CMAKE_CURRENT_LIST_DIR}/../identify-version.js" "${NodeApi_FIND_VERSION}"
-        OUTPUT_VARIABLE version
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-        COMMAND_ERROR_IS_FATAL ANY
-)
+include(ResolveNodeVersion)
+ResolveNodeVersion("${NodeApi_FIND_VERSION}" version)
 
 set(node_content_dir "${CMAKE_CURRENT_BINARY_DIR}/node-${version}")
 set(node_headers_tarball "${node_content_dir}/node-${version}-headers.tar.gz")
