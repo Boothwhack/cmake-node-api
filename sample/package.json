@@ -1,0 +1,15 @@
+{
+  "name": "node-addon-sample",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "toolchain --config Release build"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@beeswax/node-api": "file:..",
+    "@beeswax/toolchain": "^1.0.0",
+    "node-addon-api": "^5.0.0"
+  }
+}
